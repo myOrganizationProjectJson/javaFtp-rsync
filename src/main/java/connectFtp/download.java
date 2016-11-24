@@ -100,8 +100,6 @@ public class download {
 	
    public void download(String d){
 	   
-	   System.out.println(ftpPath);
-	   
 	   List<String> downloaded=downloadFile(d);
 	   
 	   for(String down:downloaded){
@@ -114,20 +112,14 @@ public class download {
    }
    
    public void download(){
+	   log.info("FTP START ...");
 	   download(ftpPath);
+	   log.info("FTP END");
    }
    
     public static void main( String[] args )
     {
-    	download download =new download();
-    	download.host="103.233.248.98";
-    	download.port=21;
-    	download.user="wolegequ18";
-    	download.password="FA2C77B387eca5";
-    	download.ftpPath="/wolegequ18/web/1077/";
-    	download.localPath="./";
-    	download.download();
-    	
+    
     	
     	
     }
